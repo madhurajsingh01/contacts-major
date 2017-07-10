@@ -1,0 +1,19 @@
+<div class="row" style="margin-top:20px;">
+    <div class="col-md-12">
+        <input type="text" ng-model="searchTxt"><button ng-click="search()">Search</button>
+    </div>
+</div>
+{{searchTxt}}
+<div class="row" style="margin-top:20px;">
+    <div class="col-md-12">
+        <div ng-repeat="contact in registrations">
+           
+            <div class="chip" ng-if="contact.name=='{{searchTxt}}'">
+                    <img src="images/icon-twitter.gif" ng-hide="contact.phno%2==1" alt="Person" width="96" height="96">
+                    <img src="images/Madhuraj.png" ng-hide="contact.phno%2==0" alt="Person" width="96" height="96">
+                    <b>Name:</b> {{contact.name}} <b>Mobile:</b> {{contact.phno}}
+                <span class="closebtn" ng-click="removeRow(contact)" onclick="this.parentElement.style.display='none'" alt="delete">&times;</span>
+            </div>
+        </div>
+    </div>
+</div>

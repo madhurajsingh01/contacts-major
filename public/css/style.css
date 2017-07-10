@@ -1,0 +1,190 @@
+header {
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    height: 50px;
+    background: rgba(0, 0, 0, 0) linear-gradient(to top, #f6f6f6 47px, #fff 100%) repeat scroll 0 0;
+}
+
+footer {
+    font-size: 18px;
+    font-weight: 900;
+    font-family: monospace;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0) linear-gradient(to top, #f6f6f6 47px, #fff 100%) repeat scroll 0 0;
+}
+
+section {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.panel-default {
+    width: 602px;
+    display: inline-block;
+}
+
+.contact-heading {
+    font-size: 15px;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+
+.contact-text {
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.wraping {
+    word-wrap: break-word !important;
+    width: 200px;
+    display: inline-block;
+}
+
+.display-links {
+    word-wrap: break-word !important;
+    text-align: center;
+    font-size: 15px;
+    /*width: 300px;*/
+    height: 800px;
+    display: inline-block;
+    position: relative;
+    border-style: double;
+    border: 1px;
+    border-color: darkgrey;
+    border-right: 2px;
+    border-right-style: solid;
+}
+
+.menu-div {
+    background: rgba(0, 0, 0, 0) linear-gradient(to top, #f6f6f6 47px, #fff 100%) repeat scroll 0 0;
+    height: 800px;
+    display: inline-block;
+    position: relative;
+}
+
+.demo-card-square.mdl-card {
+    width: 100%;
+    height: 220px;
+}
+
+.demo-card-square>.mdl-card__title {
+    color: #fff;
+    background: top right no-repeat #46B6AC;
+}
+
+.mdl-card__title-text1 {}
+
+input.ng-valid.ng-dirty {
+    border: 1px solid green;
+}
+
+input.ng-invalid.ng-touched, form.ng-submitted input.ng-invalid {
+    border: 1px solid red;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    /* 5px rounded corners */
+}
+
+
+/* On mouse-over, add a deeper shadow */
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* Add some padding inside the card container */
+
+.container {
+    padding: 2px 16px;
+}
+
+.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    width: 700px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    margin: 10px 200px 0 0;
+    background-color: #f1f1f1;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.closebtn {
+    padding-left: 10px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: #000;
+}
+
+.editbtn:hover {
+    color: #000;
+}
+
+.viewbtn :hover {
+    color: #000;
+}
+
+.editbtn {
+    padding-left: 12px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.viewbtn {
+    padding-left: 14px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#waitScreen {
+    width: 100%;
+    position: fixed;
+    min-height: 100%;
+    background: rgba(255, 255, 255, 0.67);
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.center-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.message-sent {
+    color: forestgreen !important;
+}

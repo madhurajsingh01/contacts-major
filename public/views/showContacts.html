@@ -1,0 +1,68 @@
+<form class="form-group" name="contactList">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row" ng-hide="registrations==undefine">
+                <div class="col-md-12">
+                    <h2>Contacts</h2>
+                    <table class="table panel panel-default">
+                        <thead>
+                            <row>
+                                <th class="wraping">Name</th>
+                                <th class="wraping">Mobile</th>
+                                <th class="wraping">Actions</th>
+                            </row>
+                        </thead>
+                        <tr ng-repeat="contact in viewableContacts">
+                            <td class="wraping">
+                                <a href="contacts/{{contact._id}}"><span ng-hide="state==2 && selectedIndex==$index">{{contact.name}}</span></a>
+                                <!--<input ng-model="selected.Name" ng-init="selected.Name=contact.name" ng-show="state==2 && selectedIndex==$index">-->
+                            </td>
+                            <td class="wraping">
+                                <span ng-hide="state==2 && selectedIndex==$index">{{contact.phno}}</span>
+                               <!-- <input ng-model="selected.Mobile" ng-init="selected.Mobile=contact.phno" ng-show="state==2 && selectedIndex==$index">-->
+                            </td>
+                            <!-- <td>
+                            <span ng-hide="state==2 && selectedIndex==$index">{{contact.email}}</span>
+                            <input ng-model="selected.Email" ng-init="selected.Email=contact.email" ng-show="state==2 && selectedIndex==$index">
+                        </td>
+                        <td>
+                            <span ng-hide="state==2 && selectedIndex==$index">{{contact.address}}</span>
+                            <input ng-model="selected.Address" ng-init="selected.Address=contact.address" ng-show="state==2 && selectedIndex==$index">
+                        </td>-->
+                            <td class="wraping">
+                                <a class="btn btn-primary" ng-hide="state==2 && selectedIndex==$index" href="contacts/{{contact._id}}">View</a>
+
+                                <button class="btn btn-danger"  data-toggle="confirmation" ng-click="removeRow(contact)">Delete</button>
+
+                                <button class="btn btn-primary" ng-click="editRow(contact)">Edit</button>
+
+                            </td>
+                        </tr>
+                    </table>
+                    <button ng-repeat="pageno in pages()" ng-click="showPage(pageno)">{{pageno+1}}</button>
+                    <my-directive ng-repeat="contact in contacts" contact="contact"></my-directive>
+                </div>
+
+            </div>
+            <div ng-show="error!==undefine">
+                <span>No contacts available</span>
+            </div>
+            <!--<div class="row">
+                <div class="col-md-9">
+                   <div ng-repeat="contact in registrations">
+                    <div class="chip">
+                        <a href="contacts/{{contact._id}}">
+                        <img src="images/icon-twitter.gif" ng-hide="contact.phno%2==1" alt="Person" width="96" 
+                        height="96">
+                        <img src="images/Madhuraj.png" ng-hide="contact.phno%2==0" alt="Person" width="96" 
+                        height="96">
+                         <b>Name:</b> {{contact.name}} <b>Mobile:</b> {{contact.phno}}</a> 
+                         <span class="closebtn" ng-click="removeRow(contact)" onclick="this.parentElement.style.display='none'" alt="delete">&times;</span>
+                          <span class="editbtn" ng-click="editRow(contact)" alt="Edit">&#x270D;</span>
+                    </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</form>

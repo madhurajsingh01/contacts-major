@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-12">
+        <div ng-repeat="contact in registrations">
+            <div class="chip">
+                <div class="row">
+                    <div class="col-md-9">
+                        <a href="contacts/{{contact._id}}">
+                            <img src="images/noimage.png" ng-hide="contact.phno%2==1" alt="Person" width="96" height="96">
+                            <img src="images/Madhuraj.png" ng-hide="contact.phno%2==0" alt="Person" width="96" height="96">
+                            <b>Name:</b> {{contact.name}} <b>Mobile:</b> {{contact.phno}}</a>
+
+                    </div>
+                    <div class="col-md-3">
+                        <span class="closebtn" ng-click="removeRow(contact)" onclick="this.parentElement.style.display='none'" alt="delete">&times;</span>
+                        <span class="editbtn" ng-click="editRow(contact)" alt="Edit">&#x270D;</span>
+                        <span class="viewbtn"><i class="fa fa-share-alt" aria-hidden="true"></i></span>
+                        <span class="viewbtn"><a  href="contacts/{{contact._id}}"><i class="fa fa-eye" aria-hidden="true"></i></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div ng-show="error!==undefine">
+                <span>No contacts available</span>
+        </div>
+    </div>
+</div>

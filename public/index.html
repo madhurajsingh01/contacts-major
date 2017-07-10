@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+
+<head>
+    <base href="/">
+    <title>My Contacts Diary</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
+</head>
+
+<body>
+    <div id="waitScreen">
+        <div class="center-image">
+            <img src="images/default.gif">
+        </div>
+    </div>
+    <header class="header">
+        My Contacts Diary
+    </header>
+    <div class="row">
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <!--<div class="display-links">-->
+            <!-- <ul class="nav nav-pills nav-stacked">-->
+            <ul class="nav nav-pills nav-stacked display-links">
+                <li><a href="registration">Add Contact</a></li>
+                <li><a href="contacts">Show Contacts</a></li>
+                <li><a href="contactcards">Display Cards</a></li>
+                <li><a href="searchcontact">Search Contact</a></li>
+            </ul>
+            <!-- </div>-->
+        </div>
+        <div class="col-md-1 col-sm-1 col-xs-1">
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-9" ng-view>
+            <!-- <section ng-view>
+
+            </section>-->
+        </div>
+    </div>
+    <footer>
+        Copyright 2017 &copy;
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+    </footer>
+    <script src="js/angular.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGymP4Cw6d4uSFjEcV-AWllhljSdsBXNo"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-messages.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-confirmation.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <script src="js/app.js"></script>
+    <script src="js/utility.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#emailTxt').tooltip({
+
+            });
+            $('#nameTxt').tooltip({
+
+            });
+            $('#addressTxt').tooltip({
+
+            });
+            $('#mobileTxt').tooltip({
+
+            });
+            $('#messageSentBtn').click(function() {
+                $('#emailMessageText').tooltip('toggle');
+            });
+        })
+
+    </script>
+</body>
+
+</html>
